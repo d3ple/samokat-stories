@@ -63,6 +63,14 @@
   </div>
 
   <main class="screen-container space-y-12 md:space-y-16">
+    {#if isLoading}
+      <div
+        class="h-[70vh] aspect-[9/16] rounded w-full bg-red-100 text-5xl flex justify-center items-center"
+      >
+        <Loader />
+      </div>
+    {/if}
+    
     {#each stories as story}
       <Story data={story} />
     {/each}

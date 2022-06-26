@@ -47,7 +47,7 @@
   >
     {#if isLoading}
       <div
-        class="h-[70vh] rounded w-full bg-red-100 text-5xl flex justify-center items-center"
+        class="h-[70vh] aspect-[9/16] rounded w-full bg-red-100 text-5xl flex justify-center items-center"
       >
         <Loader />
       </div>
@@ -55,11 +55,11 @@
 
     {#each slides as slide}
       <figure
-        class="flex cursor-pointer flex-shrink-0 h-[70vh] rounded overflow-hidden snap-start snap-always"
+        class="flex cursor-pointer flex-shrink-0 h-[70vh] aspect-[9/16] rounded overflow-hidden snap-start snap-always"
       >
         {#if slide.type === "fullscreen-image"}
           <img
-            class="w-full h-full object-cover"
+            class="w-full h-full object-cover bg-red-100 flex justify-center items-center"
             src={slide.url}
             alt="Слайд"
           />
